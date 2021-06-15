@@ -2,6 +2,11 @@
 # -*- coding:utf-8 -*-
 
 import random
+import json
+
+json = json.loads(open('antworten.json').read())
+antworten = json['antworten']
+reaktion = json['reaktionen']
 
 
 class Chatbot:
@@ -45,13 +50,8 @@ class Chatbot:
 
 def main():
     # Listen
-    zufallsantworten = ["Oh wirklich...",
-                        "Interessant",
-                        "Das kann man so sehen",
-                        "Ich verstehe"]
-    reaktionen = {"hallo": "aber hallo",
-                  "geht": "was verstehst du darunter?",
-                  "schmeckt": "Ich habe keinen Geschmackssinn."}
+    zufallsantworten = antworten
+    reaktionen = reaktion
 
     # Ausgabe Begrüßung
     print("Willkommen beim Chatbot (v2)")

@@ -11,7 +11,7 @@ class Chatbot:
     """
 
     def __init__(self, reaktionen, zufallsantworten):
-        # Konstruktor der Klasse
+        # Konstruktor der Klassse
         self.__reaktionen = dict(reaktionen)
         self.__zufallsantworten = list(zufallsantworten)
 
@@ -25,7 +25,7 @@ class Chatbot:
 
     def get_Response(self):
         """ get_Response
-            wird verwendet, um dem Chatbot die rictige Antwort zu entlocken
+            wird verwendet, um den Chatbot die richtige Antwort zu entlocken
             Verwendung:
             response = bot.get_Response()
         """
@@ -45,18 +45,18 @@ class Chatbot:
 
 def main():
     # Listen
-    zufallsantworten = ["Oh wirklich...",
+    zufallsantworten = ["Entschuldigung,das habe ich nicht verstanden!",
                         "Interessant",
-                        "Das kann man so sehen",
-                        "Ich verstehe"]
-    reaktionen = {"hallo": "aber hallo",
-                  "geht": "was verstehst du darunter?",
-                  "schmeckt": "Ich habe keinen Geschmackssinn."}
+                        "Ach wirklich...",
+                        "Ich verstehe!"]
+    reaktionen = {"hallo": "Schönen guten Tag!",
+                  "geht": "Mir geht es gut! Und wie geht es Ihnen?",
+                  "gefühle": "Das weiß ich nicht,denn ich habe keine Gefühle!"}
 
     # Ausgabe Begrüßung
-    print("Willkommen beim Chatbot (v2)")
-    print("Zum Beenden geben Sie bye ein...")
-    print("Worüber wollen Sie sprechen?")
+    print("Willkommen beim Chatbot (V3)")
+    print("Worüber möchten Sie sprechen?")
+    print("Zum beenden geben Sie bye ein...")
     print("")
 
     # Chatbot-Objekt
@@ -74,7 +74,7 @@ def main():
         print(bot.get_Response())
 
     # Ausgabe Verabschiedung
-    print("Bis zum nächsten Mal.")
+    print("Peace!Bis zum nächsten Mal.")
 
 
 if __name__ == "__main__":

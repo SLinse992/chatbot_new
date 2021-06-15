@@ -2,14 +2,17 @@
 # -*- coding:utf-8 -*-
 
 from chatbot import Chatbot
-from file_handling import file_handling
+import json
+
+json = json.loads(open('antworten.json').read())
+antworten = json['antworten']
+reaktion = json['reaktionen']
 
 
 def main():
     # Listen
-    file = file_handling("answers.json")
-    zufallsantworten = file.zufallsantworten
-    reaktionen = file.reaktionen
+    zufallsantworten = antworten
+    reaktionen = reaktion
 
     # Ausgabe Begrüßung
     print("Willkommen beim Chatbot (v2)")
